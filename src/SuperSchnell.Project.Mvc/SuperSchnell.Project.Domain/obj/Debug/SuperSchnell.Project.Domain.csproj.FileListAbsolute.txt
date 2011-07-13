@@ -1,5 +1,0 @@
-C:\Users\Magnus\ProjectISO9001\src\SuperSchnell.Project.Mvc\SuperSchnell.Project.Domain\bin\Debug\SuperSchnell.Project.Domain.dll
-C:\Users\Magnus\ProjectISO9001\src\SuperSchnell.Project.Mvc\SuperSchnell.Project.Domain\bin\Debug\SuperSchnell.Project.Domain.pdb
-C:\Users\Magnus\ProjectISO9001\src\SuperSchnell.Project.Mvc\SuperSchnell.Project.Domain\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Magnus\ProjectISO9001\src\SuperSchnell.Project.Mvc\SuperSchnell.Project.Domain\obj\Debug\SuperSchnell.Project.Domain.dll
-C:\Users\Magnus\ProjectISO9001\src\SuperSchnell.Project.Mvc\SuperSchnell.Project.Domain\obj\Debug\SuperSchnell.Project.Domain.pdb
