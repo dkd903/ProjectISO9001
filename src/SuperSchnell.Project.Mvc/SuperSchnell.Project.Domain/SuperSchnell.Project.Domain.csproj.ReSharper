@@ -1,0 +1,6 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E/d:Interfaces</SkipFolder>
+    <SkipFolder>BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E/d:Rules/d:Interfaces</SkipFolder>
+  </NamespaceFolders>
+</Configuration>

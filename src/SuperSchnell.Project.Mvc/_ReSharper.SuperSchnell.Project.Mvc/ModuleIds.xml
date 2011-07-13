@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="6FC87B15-FF78-478B-8C20-6516BC603CFF" ModuleId="SuperSchnell.Project.Mvc" />
+  <Module PersistentId="BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E" ModuleId="SuperSchnell.Project.Domain" />
+</Modules>

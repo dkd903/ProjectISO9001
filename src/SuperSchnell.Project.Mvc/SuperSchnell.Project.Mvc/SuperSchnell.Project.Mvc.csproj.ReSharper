@@ -1,0 +1,6 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>6FC87B15-FF78-478B-8C20-6516BC603CFF/d:Repositories/d:Interfaces</SkipFolder>
+    <SkipFolder>6FC87B15-FF78-478B-8C20-6516BC603CFF/d:EntityUpdaters/d:Interfaces</SkipFolder>
+  </NamespaceFolders>
+</Configuration>

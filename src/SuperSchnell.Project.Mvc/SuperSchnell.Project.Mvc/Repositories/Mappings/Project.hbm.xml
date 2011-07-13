@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="SuperSchnell.Project.Domain" assembly="SuperSchnell.Project.Domain">
+  <class name="Project">
+    <id name="Id">
+      <generator class="hilo">
+        <param name="max_lo">100</param>
+      </generator>
+    </id>
+    <version name="Version" type="Int32"/>
+    <property name="IsDeleted" not-null="true"/>
+    <property name="Description" not-null="true"/>
+    <many-to-one name="Customer" class="Customer" column="CustomerId"/>
+  </class>
+</hibernate-mapping>

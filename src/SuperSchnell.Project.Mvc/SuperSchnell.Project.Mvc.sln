@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSchnell.Project.Mvc", "SuperSchnell.Project.Mvc\SuperSchnell.Project.Mvc.csproj", "{6FC87B15-FF78-478B-8C20-6516BC603CFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSchnell.Project.Domain", "SuperSchnell.Project.Domain\SuperSchnell.Project.Domain.csproj", "{BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FC87B15-FF78-478B-8C20-6516BC603CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC87B15-FF78-478B-8C20-6516BC603CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC87B15-FF78-478B-8C20-6516BC603CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC87B15-FF78-478B-8C20-6516BC603CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1AC027-4EC6-47F1-A58A-7BD2D4FF7A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal
