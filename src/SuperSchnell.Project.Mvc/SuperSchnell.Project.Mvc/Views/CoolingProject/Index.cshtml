@@ -1,0 +1,38 @@
+﻿@model PagedViewModel<ICoolingProject>
+@{
+    ViewBag.Title = "Cooling Projects";
+}
+<h2>
+    Projects</h2>
+<table>
+    <tr>
+        <th>
+            Description
+        </th>
+        <th>
+            Company name
+        </th>
+        <th>
+            Company account
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var project in Model.Entities)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(project.Description, "Details", new { id = project.Id })
+            </td>
+            <td>
+                @project.CustomerName
+            </td>
+            <td>
+                @Html.ActionLink(project.CustomerAccount,"Details","Customer",new {id = project.Customer.Id},null)
+            </td>
+            <td>
+                @Html.ActionLink("Delete","Delete",new{id = project.Id,version = project.Version})
+            </td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("Create","Create")

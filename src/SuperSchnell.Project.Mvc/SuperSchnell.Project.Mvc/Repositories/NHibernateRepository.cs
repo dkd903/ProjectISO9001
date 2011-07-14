@@ -5,11 +5,10 @@ using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using SuperSchnell.Project.Domain;
 using SuperSchnell.Project.Mvc.EntityUpdaters;
-using SuperSchnell.Project.Mvc.Utilities;
 
 namespace SuperSchnell.Project.Mvc.Repositories
 {
-    public class NHibernateRepository:IRepository
+    public class NHibernateRepository : IRepository
     {
         private static readonly ISessionFactory _sessionFactory;
         static NHibernateRepository()
@@ -49,7 +48,7 @@ namespace SuperSchnell.Project.Mvc.Repositories
             }
         }
 
-        public SaveResult TryDelete<TEntity>(long id, int version) 
+        public SaveResult TryDelete<TEntity>(long id, int version)
             where TEntity : class, IEntity
         {
             if (id == 0)
@@ -72,7 +71,7 @@ namespace SuperSchnell.Project.Mvc.Repositories
                         entity.Delete();
                         session.Update(entity);
                         tx.Commit();
-                     
+
                         return SaveResult.SuccessResult();
                     }
                     catch (Exception)

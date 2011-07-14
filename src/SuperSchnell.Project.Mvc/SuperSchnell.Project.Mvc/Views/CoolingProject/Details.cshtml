@@ -1,0 +1,36 @@
+﻿@model SuperSchnell.Project.Domain.ICoolingProject
+@{
+    ViewBag.Title = "Cooling project";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>Cooling project</legend>
+    <div class="display-label">
+        Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    @if(Model.Customer == null)
+    {
+        <p>No customer</p>
+    }
+    else
+    {
+        <div class="display-label">
+            CustomerName</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CustomerName)
+        </div>
+
+        <div class="display-label">
+            CustomerAccount</div>
+        <div class="display-field">
+            @Html.ActionLink(Model.CustomerAccount,"Details","Customer",new{id = Model.Customer.Id},null)
+        </div>
+    }
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

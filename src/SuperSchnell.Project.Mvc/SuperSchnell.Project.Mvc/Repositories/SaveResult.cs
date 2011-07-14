@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SuperSchnell.Project.Mvc.Utilities
+namespace SuperSchnell.Project.Mvc.Repositories
 {
     public class SaveResult
     {

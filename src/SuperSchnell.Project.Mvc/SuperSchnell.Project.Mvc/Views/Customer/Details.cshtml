@@ -1,0 +1,48 @@
+﻿@model SuperSchnell.Project.Domain.ICustomer
+@{
+    ViewBag.Title = "Details";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>ICustomer</legend>
+    <div class="display-label">
+        AccountNumber</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AccountNumber)
+    </div>
+    <div class="display-label">
+        CompanyName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyName)
+    </div>
+    <div class="display-label">
+        Street</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Street)
+    </div>
+    <div class="display-label">
+        PlaceName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlaceName)
+    </div>
+    <div class="display-label">
+        Zip</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Zip)
+    </div>
+    <div class="display-label">
+        City</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+    <div class="display-label">
+        Country</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

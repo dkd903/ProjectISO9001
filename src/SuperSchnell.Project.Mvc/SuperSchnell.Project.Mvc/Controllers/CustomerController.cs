@@ -11,20 +11,26 @@ using SuperSchnell.Project.Mvc.Repositories;
 
 namespace SuperSchnell.Project.Mvc.Controllers
 {
+    [Authorize]
     public class CustomerController : Controller
     {
-        private IRepository _repository;
+        private readonly IRepository _repository;
 
         public CustomerController(IRepository repository)
         {
             _repository = repository;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int page = 0, int pageSize = 20)
         {
-            var options = new ResultOptions();
-            var customers = _repository.WrapQueryInTransaction(s => FindCustomersQuery(s,string.Empty,options));
-            return View(new PagedViewModel<ICustomer>(customers,options));
+            var options = new ResultOptions { Page = page, PageSize = pageSize };
+            var customers = _repository.WrapQueryInTransaction(s => FindCustomersQuery(s, string.Empty, options));
+            return View(new PagedViewModel<ICustomer>(customers, options));
+        }
+        public ActionResult Details(long id)
+        {
+            var customer = _repository.WrapQueryInTransaction(s => s.Get<Customer>(id));
+            return View(customer);
         }
         public ActionResult Edit(long id)
         {
@@ -44,7 +50,7 @@ namespace SuperSchnell.Project.Mvc.Controllers
         private ActionResult DoEdit(Customer customer)
         {
             var viewModel = new EditCustomerViewModel(customer);
-            return View("Edit",viewModel);
+            return View("Edit", viewModel);
         }
         public ActionResult Delete(long id, int version)
         {
@@ -59,14 +65,14 @@ namespace SuperSchnell.Project.Mvc.Controllers
             var result = CustomersQuery(session, searchString)
                 .LimitResultSet(options)
                 .Future<ICustomer>();
-            return new PagedResultSet<ICustomer>(result.ToList(),countQuery.Value);
+            return new PagedResultSet<ICustomer>(result.ToList(), countQuery.Value);
         }
 
-        private IQueryOver<Customer,Customer> CustomersQuery(ISession session, string searchString)
+        private IQueryOver<Customer, Customer> CustomersQuery(ISession session, string searchString)
         {
-            var criteria =
-                Restrictions.Or(Restrictions.On<Customer>(c => c.AccountNumber).IsLike(searchString, MatchMode.Start),
-                                Restrictions.On<Customer>(c => c.CompanyName).IsLike(searchString, MatchMode.Start));
+            var criteria = Restrictions.Or(Restrictions
+                .On<Customer>(c => c.AccountNumber).IsLike(searchString, MatchMode.Start), Restrictions
+                .On<Customer>(c => c.CompanyName).IsLike(searchString, MatchMode.Start));
             return session.QueryOver<Customer>()
                 .Where(criteria);
         }

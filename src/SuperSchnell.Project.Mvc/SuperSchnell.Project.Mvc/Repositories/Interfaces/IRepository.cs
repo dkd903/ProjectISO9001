@@ -2,7 +2,6 @@ using System;
 using NHibernate;
 using SuperSchnell.Project.Domain;
 using SuperSchnell.Project.Mvc.EntityUpdaters;
-using SuperSchnell.Project.Mvc.Utilities;
 
 namespace SuperSchnell.Project.Mvc.Repositories
 {
