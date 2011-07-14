@@ -1,5 +1,62 @@
-﻿@{
+﻿@model PagedViewModel<SuperSchnell.Project.Domain.ICustomer>
+@{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<h2>
+    Index</h2>
+<table>
+    <tr>
+        <th>
+            Account number
+        </th>
+        <th>
+            Company
+        </th>
+        <th>
+            Street
+        </th>
+        <th>
+            Place name
+        </th>
+        <th>
+            Zip
+        </th>
+        <th>
+            City
+        </th>
+        <th>
+            Country
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var customer in Model.Entities)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(customer.AccountNumber,"Edit",new{id = customer.Id})
+            </td>
+            <td>
+                @customer.CompanyName
+            </td>
+            <td>
+                @customer.Street
+            </td>
+            <td>
+                @customer.PlaceName
+            </td>
+            <td>
+                @customer.Zip
+            </td>
+            <td>
+                @customer.City
+            </td>
+            <td>
+                @customer.Country
+            </td>
+            <td>
+                @Html.ActionLink("Delete","Delete",new{id = customer.Id,version = customer.Version})
+            </td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("Create","Create")

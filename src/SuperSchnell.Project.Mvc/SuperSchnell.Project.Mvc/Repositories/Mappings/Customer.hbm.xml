@@ -15,5 +15,7 @@
     <property name="City" not-null="true"/>
     <property name="Zip" not-null="true"/>
     <property name="Country" not-null="true" />
+    <filter name="IsNotDeleted"/>
   </class>
+  <filter-def name="IsNotDeleted" condition="IsDeleted = 0"/>
 </hibernate-mapping>

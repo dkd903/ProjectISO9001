@@ -32,6 +32,7 @@ namespace SuperSchnell.Project.Mvc.Repositories
             {
                 using (var tx = session.BeginTransaction())
                 {
+                    session.EnableFilter("IsNotDeleted");
                     try
                     {
                         var result = query(session);

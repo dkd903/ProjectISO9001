@@ -10,5 +10,6 @@
     <property name="IsDeleted" not-null="true"/>
     <property name="Description" not-null="true"/>
     <many-to-one name="Customer" class="Customer" column="CustomerId"/>
+    <filter name="IsNotDeleted"/>
   </class>
 </hibernate-mapping>
